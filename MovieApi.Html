@@ -4,10 +4,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Movies</title>
-    <script src="MovieApi.js" type="text/javascript"></script>
+   
     <link rel="stylesheet" type="text/css" href="MovieApi.css">
 </head>
 <body>
     <H1>MovieList</H1>
+    
+<h2>Filterable Table</h2>
+<p>Type something in the input field to search the table for first names, last names or emails:</p>  
+<input id="myInput" type="text" placeholder="Search..">
+<br><br>
+    <table>
+        <thead>
+            <tbody id = "myTable">
+        <tr>
+          <th>Movies.Title</th>
+          <th>Genre</th>
+          <th>Email</th>
+        </tr>
+    </tbody>
+        </thead>
+    <script src="MovieApi.js" type="text/javascript"></script>
 </body>
 </html>
