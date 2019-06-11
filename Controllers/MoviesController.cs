@@ -17,9 +17,10 @@ namespace AndrewsApi.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: api/Movies
-        public IQueryable<Movies> GetMovies()
+        public IHttpActionResult GetMovies()
         {
-            return db.Movies;
+            var movies = db.Movies.ToList();
+            return Ok(movies);
         }
 
         // GET: api/Movies/5
