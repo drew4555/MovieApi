@@ -12,8 +12,30 @@ table {
   
   tr:nth-child(even) {
     background-color: #dddddd;
+    text-decoration-color: blueviolet;
   }
   body{
     background-image: url("Movies.jpg");
-    background-repeat: no-repeat
+    background-repeat: no-repeat;
+    height: 400px;
+    width: 400px;
+    text-align: center;
+    padding: 100px;
+    padding-left: 400px;
+    
   }
+  button{
+    border-top: 30px;
+    border-bottom: 4px;
+    margin: 30px;
+    margin-top: 50px;
+      background-color: rgb(82, 186, 179);
+      border-radius: 6px;
+      border: none;
+      color: rgb(255, 255, 255);
+      padding: 10px;
+
+      width: 200px;
+      cursor: pointer;
+    }
+  
