@@ -8,16 +8,20 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
+using AndrewsApi.Core;
 using AndrewsApi.Models;
 
 namespace AndrewsApi.Controllers
 {
+    [AllowCrossSite]
     public class MoviesController : ApiController
     {
+       
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: api/Movies
-        public IHttpActionResult GetMovies()
+        
+        public IHttpActionResult Get()
         {
             var movies = db.Movies.ToList();
             return Ok(movies);

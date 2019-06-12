@@ -1,14 +1,8 @@
-<script>
-$(document).ready(function(){
-  $("#myInput").on("keyup", function() {
-    var value = $(this).val().toLowerCase();
-    $("#myTable tr").filter(function() {
-      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-    });
-})}
-};
-</script>
-$.ajax({
-    type:"GET",
-    url: ""
-})
+
+$("button").click(function(){
+ $.get("https://localhost:44312/api/movies", function(data){
+  $.each(data, function(key, value){
+    $("#myTable").append(`<tr><td>${value.Title} </td> <td> ${value.Genre} </td> <td> ${value.DirectorName} </td</tr>`)
+  });
+});
+});

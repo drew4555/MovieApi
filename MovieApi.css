@@ -13,3 +13,7 @@ table {
   tr:nth-child(even) {
     background-color: #dddddd;
   }
+  body{
+    background-image: url("Movies.jpg");
+    background-repeat: no-repeat
+  }
