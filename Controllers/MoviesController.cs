@@ -7,12 +7,14 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 using System.Web.Http.Description;
 using AndrewsApi.Core;
 using AndrewsApi.Models;
 
 namespace AndrewsApi.Controllers
 {
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     [AllowCrossSite]
     public class MoviesController : ApiController
     {
@@ -77,13 +79,16 @@ namespace AndrewsApi.Controllers
 
         // POST: api/Movies
         [ResponseType(typeof(Movies))]
-        public IHttpActionResult PostMovies(Movies movies)
+        public IHttpActionResult PostMovies(Movies postmovies)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
-
+            var movies = new Movies();
+            movies.Title = postmovies.Title;
+            movies.Genre = postmovies.Genre;
+            movies.DirectorName = postmovies.DirectorName;
             db.Movies.Add(movies);
             db.SaveChanges();
 
