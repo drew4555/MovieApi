@@ -28,12 +28,7 @@ namespace AndrewsApi.Controllers
             var movies = db.Movies.ToList();
             return Ok(movies);
         }
-        [ResponseType(typeof(Movies))]
-        public IHttpActionResult FilterByTitle(string Title)
-        {
-            var movies = db.Movies.Where(m => m.Title == Title).ToList();
-            return Ok(movies);
-        }
+
         // GET: api/Movies/5
         [ResponseType(typeof(Movies))]
         public IHttpActionResult GetMovies(int id)

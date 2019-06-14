@@ -29,34 +29,3 @@ function addNewMovie( e ){
 function searchForMovie(){
 getAllMovies();
 }
-  
-
-// $.get("https://localhost:44312/api/movies/FilterByTitle/" + "Superbad"), function(data){
-//   $("#myTable").empty()
-//   $.each(data, function(key, value){
-//   $("#myTable").append(`<tr><td>${value.Title} </td> <td> ${value.Genre} </td> <td> ${value.DirectorName} </td></tr>`)
-// })
-// }
-// }
-// var moviesByTitle = data.filter(function(movie) {
-//   if(movie.Title == searchForMovie) {
-//     return true
-//   }
-
-
-//   $.each(moviesBytitle, function(key, value){
-//     if(value.Title == searchForMovie){
-//       // $.get("https://localhost:44312/api/movies/" + value.id)
-//         
-//     // $("#myTable").append(`<tr><td> ${value.Title}</td><td> ${value.Genre} </td><td> ${value.DirectorName} </td></tr>`)
-//     }
-//   });
-//   }
-// )}
-// }
-function searchByGenre(){
-
-}
-function searchByDirector(){
-
-}
