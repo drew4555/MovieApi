@@ -15,11 +15,14 @@
     <div class = "center">
     <H1>Movies</H1>
     <img id = "movies"> 
+    <p>Please Use Proper Spelling And Capitalization</p>
+    <form id = "my-form1">Search For
+            <input type="text" id="mySearch" name="mySearch" placeholder = "Search"/>
+            </form>
     
     <button class = "button" onclick = 'getAllMovies()'>All Movies</button> 
-    <button class = "button button1" onclick = 'searchByTitle()'>Search by Title</buttontype></button>
-    <button class = "button button2" onclick = 'searchByGenre()'>Search by Genre</button>
-    <button class = "button button3" onclick = 'searchByDirector()'>Search by Director Name</button>
+    <button class = "button button1" onclick = 'searchForMovie()'>Search For...</buttontype></button>
+   
 
 <br><br>
     <table>
@@ -38,9 +41,7 @@
         
             <button type="submit" onclick = "addNewMovie()">Submit</button>
         </form>
-    <form id = "myInput">Search For
-        <intput type="text" id="mySearch" name="mySearch" placeholder = "Search"/>
-        </form>
+
     <script src="MovieApi.js" type="text/javascript"></script>
 </body>
 </html>
